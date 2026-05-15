@@ -17,6 +17,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(40, 40, 40));
     }
 
     /**
@@ -36,14 +37,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnDescurtir = new javax.swing.JButton();
         btnFavoritos = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        txtBusca.setBackground(new java.awt.Color(102, 102, 102));
+        txtBusca.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
+        txtBusca.setForeground(new java.awt.Color(255, 255, 255));
         txtBusca.addActionListener(this::txtBuscaActionPerformed);
 
+        btnBuscar.setBackground(new java.awt.Color(102, 102, 102));
+        btnBuscar.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(this::btnBuscarActionPerformed);
 
+        tabelaVideos.setBackground(new java.awt.Color(102, 102, 102));
+        tabelaVideos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 204)));
+        tabelaVideos.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
+        tabelaVideos.setForeground(new java.awt.Color(255, 255, 255));
         tabelaVideos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -57,17 +69,34 @@ public class TelaPrincipal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabelaVideos);
 
+        btnCurtir.setBackground(new java.awt.Color(102, 102, 102));
+        btnCurtir.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
+        btnCurtir.setForeground(new java.awt.Color(255, 255, 255));
         btnCurtir.setText("Curtir");
         btnCurtir.addActionListener(this::btnCurtirActionPerformed);
 
+        btnDescurtir.setBackground(new java.awt.Color(102, 102, 102));
+        btnDescurtir.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
+        btnDescurtir.setForeground(new java.awt.Color(255, 255, 255));
         btnDescurtir.setText("Descurtir");
         btnDescurtir.addActionListener(this::btnDescurtirActionPerformed);
 
+        btnFavoritos.setBackground(new java.awt.Color(102, 102, 102));
+        btnFavoritos.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
+        btnFavoritos.setForeground(new java.awt.Color(255, 255, 255));
         btnFavoritos.setText("Meus Favoritos");
         btnFavoritos.addActionListener(this::btnFavoritosActionPerformed);
 
+        jButton1.setBackground(new java.awt.Color(102, 102, 102));
+        jButton1.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Ver Minhas Listas");
         jButton1.addActionListener(this::jButton1ActionPerformed);
+
+        jLabel2.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 3, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("FEItv");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,24 +114,29 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(281, 281, 281)
-                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(txtBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(txtBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(290, 290, 290)
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(40, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(279, 279, 279))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addComponent(txtBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBuscar)
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -110,7 +144,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     .addComponent(btnFavoritos)
                     .addComponent(btnCurtir)
                     .addComponent(jButton1))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -121,47 +155,47 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtBuscaActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        // 1. Pega o que foi digitado (se estiver vazio, ele busca todos)
+        //Pega o que foi digitado (se estiver vazio, ele busca todos)
         String textoBusca = txtBusca.getText();
         
-        // 2. Chama o controller para buscar no banco
+        // Chama o controller para buscar no banco
         controller.VideoController controller = new controller.VideoController();
         java.util.List<String[]> listaVideos = controller.buscarVideos(textoBusca);
         
-        // 3. Prepara a Tabela para receber os dados
+        //Prepara a Tabela para receber os dados
         javax.swing.table.DefaultTableModel modeloTabela = (javax.swing.table.DefaultTableModel) tabelaVideos.getModel();
         
-        // Configura o nome das colunas lá em cima (opcional, mas fica bonito)
+        // Configura o nome das colunas 
         modeloTabela.setColumnIdentifiers(new String[]{"ID", "Título", "Tipo", "Curtidas", "Descurtidas"});
         
         // Limpa a tabela antes de colocar os resultados novos
         modeloTabela.setRowCount(0); 
         
-        // 4. Joga os vídeos encontrados dentro da tabela
+        //Joga os vídeos encontrados dentro da tabela
         for (String[] video : listaVideos) {
             modeloTabela.addRow(video);
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnCurtirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCurtirActionPerformed
-        // 1. Descobre qual linha da tabela o usuário clicou
+        //  Descobre qual linha da tabela o usuário clicou
         int linhaSelecionada = tabelaVideos.getSelectedRow();
         
-        // Se for -1, significa que ele não clicou em nenhuma linha
+       
         if (linhaSelecionada == -1) {
             javax.swing.JOptionPane.showMessageDialog(this, "Por favor, selecione um vídeo na tabela primeiro!");
             return;
         }
         
-        // 2. Pega o ID do vídeo que está na coluna 0 da linha selecionada
+        // Pega o ID do vídeo que está na coluna 0 da linha selecionada
         String idString = tabelaVideos.getValueAt(linhaSelecionada, 0).toString();
         int idVideo = Integer.parseInt(idString);
         
-        // 3. Chama o Controller para dar o Like
+        //Chama o Controller para dar o Like
         controller.VideoController controller = new controller.VideoController();
         controller.curtir(idVideo);
         
-        // 4. Avisa que deu certo e simula um clique no botão de buscar para atualizar a tabela na hora!
+        //Avisa que deu certo
         javax.swing.JOptionPane.showMessageDialog(this, "Vídeo curtido com sucesso!");
         btnBuscar.doClick();
     }//GEN-LAST:event_btnCurtirActionPerformed
@@ -198,12 +232,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         //  Abre uma caixinha perguntando o nome da lista
         String nomeLista = javax.swing.JOptionPane.showInputDialog(this, "Digite o nome da sua lista (Ex: Filmes de Ação, Meus Favoritos):");
         
-        // Se a pessoa cancelar ou não digitar nada, cancela a operação
+        // Se a pessoa cancelar ou não digitar nada cancela a operação
         if (nomeLista == null || nomeLista.trim().isEmpty()) {
             return; 
         }
         
-        //  Pega a identidade do usuário e manda salvar
+        //  Pega a identidade do usuario e manda salvar
         int idUsuario = model.Sessao.idUsuarioLogado; 
         
         controller.ListaController controller = new controller.ListaController();
@@ -249,6 +283,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnDescurtir;
     private javax.swing.JButton btnFavoritos;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabelaVideos;
     private javax.swing.JTextField txtBusca;
